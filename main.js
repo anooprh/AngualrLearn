@@ -1,5 +1,5 @@
 var myApp = angular.module('myApp', []);
-myApp.factoty('Data', function () {
+myApp.factory('Data', function () {
     return {message: "I am data from a service"}
 })
 
