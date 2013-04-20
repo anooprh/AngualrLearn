@@ -5,17 +5,7 @@
 </head>
 <body>
 <div ng-app="myApp">
-
-    <div ng-controller="AvengersController">
-        <input type="text" ng-model="searchBox">
-        <table>
-            <tr ng-repeat="actor in avengers.cast | orderBy:'name' | limitTo:5 |filter:searchBox ">
-                <td>{{actor.name | lowercase}}</td>
-                <td>{{actor.character | uppercase}}</td>
-            </tr>
-        </table>
-    </div>
-
+    <superman></superman>
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
