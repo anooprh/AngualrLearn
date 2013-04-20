@@ -9,9 +9,9 @@
     <div ng-controller="AvengersController">
         <input type="text" ng-model="searchBox">
         <table>
-            <tr ng-repeat="actor in avengers.cast | filter:searchBox">
-                <td>{{actor.name}}</td>
-                <td>{{actor.character}}</td>
+            <tr ng-repeat="actor in avengers.cast | orderBy:'name' | limitTo:5 |filter:searchBox ">
+                <td>{{actor.name | lowercase}}</td>
+                <td>{{actor.character | uppercase}}</td>
             </tr>
         </table>
     </div>
