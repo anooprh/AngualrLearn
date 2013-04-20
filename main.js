@@ -1,19 +1,23 @@
 var myApp = angular.module('myApp', []);
 
-myApp.directive('superman', function () {
+myApp.directive('enter', function() {
     return {
-        restrict: 'E',
-        link: function() {
-            alert("I am superman")
+        restrict: 'A',
+        link: function(element){
+            element.bind('mouseenter', function() {
+                console.log("I am inside you");
+            })
         }
     }
 })
 
-myApp.directive('spiderman', function () {
+myApp.directive('exit', function() {
     return {
-        restrict: 'C',
-        link: function() {
-            alert("I am spiderman")
+        restrict: 'A',
+        link: function(element){
+            element.bind('mouseleave', function() {
+                console.log("I've left you");
+            })
         }
     }
 })
